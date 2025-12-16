@@ -5,7 +5,7 @@ void bfs(int a[20][20], int n, int src, int des[])
     int ft,r,q[20],pr_src,pr_des,k=0,i;
     for(i=0;i<n;i++)
         des[i]=-1;
-    f=r=0;
+    ft=r=0;
     q[r]=src;
     des[src]=src;
     while(ft<=r)
@@ -50,6 +50,7 @@ void main()
 
     getch();
 }
+
 
 
 
