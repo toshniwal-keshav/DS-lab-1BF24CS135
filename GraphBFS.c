@@ -2,21 +2,21 @@
 #include<conio.h>
 void bfs(int a[20][20], int n, int src, int des[])
 {
-    int f,r,q[20],u,v,k=0,i;
+    int ft,r,q[20],pr_src,pr_des,k=0,i;
     for(i=0;i<n;i++)
         des[i]=-1;
     f=r=0;
     q[r]=src;
     des[src]=src;
-    while(f<=r)
+    while(ft<=r)
     {
-        u=q[f++];
-        for(v=0;v<n;v++)
+        pr_src=q[ft++];
+        for(pr_des=0;pr_des<n;pr_des++)
         {
-            if(a[u][v]==1 && des[v]==-1)
+            if(a[pr_src][pr_des]==1 && des[pr_des]==-1)
             {
-                des[v]=u;
-                q[++r]=v;
+                des[pr_des]=pr_src;
+                q[++r]=pr_des;
             }
         }
     }
@@ -50,5 +50,6 @@ void main()
 
     getch();
 }
+
 
 
